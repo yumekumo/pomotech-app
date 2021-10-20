@@ -12,8 +12,8 @@
       <tr>
         <td><%= link_to task.title, task_path(task), class: "task_#{task.id}" %></td>
         <td><%= task.body %></td>
-        <td><i class="far fa-clock"></i><%= task.pomodoros.count %></td>
-        <% if task.is_finished? %>
+        <td><i class="far fa-clock"></i> <%= task.pomodoros.count %></td>
+        <% if !task.is_finished? %>
           <td><%= link_to '開始', timer_task_path(task), class: "btn btn-sm btn-primary timer_task_path_#{task.id}" %></td>
         <% else %>
           <td><%= link_to '詳細', task_path(task), class: "btn btn-sm btn-info task_path_#{task.id}" %></td>
