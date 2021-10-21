@@ -6,15 +6,15 @@
   </tr>
   <tr>
 	  <th>今日</th>
-	  <th><i class="far fa-clock"></i> <%= user.pomodoros.where(created_at: Date.today).count %> sets</th>
+	  <th><i class="far fa-clock"></i> <%= pluralize(user.pomodoros.where(created_at: Date.today).count, 'set') %></th>
   </tr>
   <tr>
     <th>今週</th>
-    <th><i class="far fa-clock"></i> <%= user.pomodoros.where(created_at: Date.today.all_week).count %> sets</th>
+    <th><i class="far fa-clock"></i> <%= pluralize(user.pomodoros.where(created_at: Date.today.all_week).count, 'set') %></th>
   </tr>
   <tr>
     <th>今月</th>
-    <th><i class="far fa-clock"></i> <%= user.pomodoros.where(created_at: Date.today.all_month).count %> sets</th>
+    <th><i class="far fa-clock"></i> <%= pluralize(user.pomodoros.where(created_at: Date.today.all_month).count, 'set') %></th>
   </tr>
 </table>
 
