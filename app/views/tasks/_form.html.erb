@@ -7,6 +7,18 @@
     <%= f.label :description, "説明(省略可)" %>
     <%= f.text_area :body, class: 'form-control book_body' %>
   </div>
+  <% if task.id.present? %>
+    <div class="form-group">
+      <div class="form-check">
+        <%= f.radio_button :is_finished, :false, class: 'form-check-input' %>
+        <%= f.label :is_finished, "未完了", {value: :false, style: "display: inline-block;"} %>
+      </div>
+      <div class="form-check">
+        <%= f.radio_button :is_finished, :true, class: 'form-check-input' %>
+        <%= f.label :is_finished, "完了済み", {value: :true, style: "display: inline-block;"} %>
+      </div>
+    </div>
+  <% end %>
   <div class="form-group">
     <%= f.submit "作成", class: 'btn btn-success' %>
   </div>

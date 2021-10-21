@@ -21,9 +21,16 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id])
   end
 
   def update
+    @task = Task.find(params[:id])
+    if @task.update(edit_task_params)
+      redirect_to task_path(@task), notice: "You have updated task successfully."
+    else
+      render 'edit'
+    end
   end
 
   def delete
@@ -36,6 +43,10 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :body)
+  end
+  
+  def edit_task_params
+    params.require(:task).permit(:title, :body, :is_finished)
   end
 
 end

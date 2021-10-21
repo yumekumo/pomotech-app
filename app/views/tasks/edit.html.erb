@@ -1,0 +1,10 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  		<h1>Editing Task</h1>
+    	<%= render 'layouts/errors', obj: @task %>
+  		<%= render 'form', task: @task %>
+  		<%= link_to 'Menu', task_path(@task), class: "task_#{@task.id}" %> |
+  		<%= link_to 'Back', tasks_path, class: "back" %>
+  </div>
+</div>

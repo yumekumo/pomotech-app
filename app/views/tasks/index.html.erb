@@ -4,13 +4,13 @@
     <div class='col-md-3'>
       <h2>User info</h2>
       <%= render 'users/info', user: current_user %>
-      <h2 class="mt-3">新規タスク</h2>
+      <h2 class="mt-3">New Task</h2>
       <%= render 'form', task: @task %>
     </div>
     <div class='col-md-8 offset-md-1'>
-      <h2>未完了のタスク</h2>
+      <h2>Unfinished Tasks</h2>
       <%= render 'index', tasks: @tasks.where(is_finished: false) %>
-      <h2>完了済みタスク</h2>
+      <h2>Finished Tasks</h2>
       <%= render 'index', tasks: @tasks.where(is_finished: true) %>
     </div>
   </div>
