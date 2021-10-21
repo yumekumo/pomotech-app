@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
+  before_action :ensure_correct_user, only: [:show, :edit, :update, :destroy, :timer]
+  
   def index
     @tasks = current_user.tasks
     @task = Task.new
@@ -17,15 +20,12 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
   end
 
   def edit
-    @task = Task.find(params[:id])
   end
 
   def update
-    @task = Task.find(params[:id])
     if @task.update(edit_task_params)
       redirect_to task_path(@task), notice: "You have updated task successfully."
     else
@@ -33,7 +33,9 @@ class TasksController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @task.destroy
+    redirect_to tasks_path
   end
 
   def timer
@@ -48,5 +50,11 @@ class TasksController < ApplicationController
   def edit_task_params
     params.require(:task).permit(:title, :body, :is_finished)
   end
-
+  
+  def ensure_correct_user
+    @task = Task.find(params[:id])
+    unless @task.user_id == current_user.id
+      redirect_to tasks_path
+    end
+  end
 end
