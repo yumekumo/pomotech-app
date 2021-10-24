@@ -1,0 +1,20 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  		<h1>Pomodoro Timer</h1>
+  		<h2><%= @task.title %></h2>
+  		<h5><i class="far fa-clock"></i> <%= @task.pomodoros.count+1 %> set目</h5>
+  		<div class="timer-area border border-dark border-warning bg-light text-center d-block py-3">
+      	<h1 id="timer">25:00</h1>
+        <button id="startbutton" class="btn btn-primary">start</button>
+        <button id="stopbutton" class="btn btn-danger">stop</button>
+        <button id="workbutton" class="btn btn-secondary">work time</button>
+        <button id="restbutton" class="btn btn-info">rest time</button>
+  		</div>
+      </br>
+      <%= link_to "中断(+ 1 set)", task_pomodoros_path(@task, is_finished: false), method: :post, data: { confirm: '終了しますか？' }, class: "btn btn-warning btn-sm btn-block mb-3" %>
+      <%= link_to "完了(+ 1 set)", task_pomodoros_path(@task, is_finished: true), method: :post, data: { confirm: '終了しますか？' }, class: "btn btn-success btn-sm btn-block mb-3"%>
+      <%= link_to "メニュー", task_path(@task), class: "task_#{@task.id}" %> |
+      <%= link_to "戻る", tasks_path, class: "back" %>
+  </div>
+</div>

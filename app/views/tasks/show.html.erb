@@ -11,10 +11,10 @@
       <h3><%= @task.title %></h3>
       <p>
         <% if !@task.is_finished? %>
-          <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_path_#{@task.id}" %>
+          <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
         <% end %>
         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
-        <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_task_#{@task.id}" %>
+        <%= link_to '削除', task_path(@task), method: :destroy, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_task_#{@task.id}" %>
       </p>
       <h5>説明</h4>
       <p><%= @task.body %></p>

@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   get 'home/about' => 'homes#about'
   devise_for :users
   resources :users
-  resources :tasks, only: [:index, :create, :show, :edit, :update, :delete]
-  resources :tasks do
+  resources :tasks, only: [:index, :create, :show, :edit, :update, :destroy] do
     member do
       get 'timer'
     end
+    resources :pomodoros, only: [:create, :destroy]
   end
 end
