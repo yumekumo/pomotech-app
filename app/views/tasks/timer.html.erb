@@ -14,7 +14,7 @@
       </br>
       <%= link_to "中断(+ 1 set)", task_pomodoros_path(@task, is_finished: false), method: :post, data: { confirm: '終了しますか？' }, class: "btn btn-warning btn-sm btn-block mb-3" %>
       <%= link_to "完了(+ 1 set)", task_pomodoros_path(@task, is_finished: true), method: :post, data: { confirm: '終了しますか？' }, class: "btn btn-success btn-sm btn-block mb-3"%>
-      <%= link_to "メニュー", task_path(@task), class: "task_#{@task.id}" %> |
-      <%= link_to "戻る", tasks_path, class: "back" %>
+      <%= link_to "メニュー", task_path(@task), data: { confirm: '戻りますか？(セット数はカウントされません)' }, class: "task_#{@task.id}" %> |
+      <%= link_to "戻る", tasks_path, data: { confirm: '戻りますか？(セット数はカウントされません)' },class: "back" %>
   </div>
 </div>
