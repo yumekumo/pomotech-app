@@ -6,7 +6,7 @@
   </tr>
   <tr>
 	  <th>今日</th>
-	  <th><i class="far fa-clock"></i> <%= pluralize(user.pomodoros.where("created_at > ?", Date.current).count, 'set') %></th>
+	  <th><i class="far fa-clock"></i> <%= pluralize(user.pomodoros.where("created_at > ?", Date.yesterday.end_of_day).count, 'set') %></th>
   </tr>
   <tr>
     <th>今週</th>
