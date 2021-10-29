@@ -9679,3 +9679,1571 @@ Processing by HomesController#info as HTML
 Completed 200 OK in 122ms (Views: 120.2ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 27.138.247.173 at 2021-10-29 15:32:16 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:13
+  Rendered layouts/_header.html.erb (20.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 786ms (Views: 771.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 15:32:19 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (20.7ms)
+  Rendered tasks/_form.html.erb (12.6ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (21.9ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (11.6ms)
+  Rendered tasks/index.html.erb within layouts/application (78.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 251ms (Views: 212.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/info" for 27.138.247.173 at 2021-10-29 15:32:25 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#info as HTML
+  Rendering homes/info.html.erb within layouts/application
+  Rendered homes/info.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:13
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 15:41:37 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (12.2ms)
+  Rendered tasks/_form.html.erb (3.0ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (11.3ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (8.5ms)
+  Rendered tasks/index.html.erb within layouts/application (43.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 192ms (Views: 185.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 15:42:59 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"22T88OPG/gPfk4MpcACHkQH8+xMh77Wgl8N/K40deBR6lawhAq9pcojhbpBr2/B9dESdd27/eCz1Qw4JFMvhhA==", "task"=>{"title"=>"Rubyの勉強", "body"=>"教本P.33まで"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "is_finished", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Rubyの勉強"], ["body", "教本P.33まで"], ["is_finished", 0], ["user_id", 1], ["created_at", "2021-10-29 15:42:59.106684"], ["updated_at", "2021-10-29 15:42:59.106684"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/7
+Completed 302 Found in 20ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/tasks/7" for 27.138.247.173 at 2021-10-29 15:42:59 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.3ms)
+  Rendered tasks/_form.html.erb (2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/show.html.erb:22
+  [1m[36mPomodoro Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pomodoros" WHERE "pomodoros"."task_id" = ? LIMIT ?[0m  [["task_id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:31
+  Rendered tasks/show.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 106ms (Views: 99.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/7/timer" for 27.138.247.173 at 2021-10-29 15:43:01 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#timer as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/timer.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/timer.html.erb:6
+  Rendered tasks/timer.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 110ms (Views: 104.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tasks/7/pomodoros?is_finished=false" for 27.138.247.173 at 2021-10-29 15:43:11 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PomodorosController#create as HTML
+  Parameters: {"authenticity_token"=>"CG+JuNgUxrRnKtEOaqCa5gWhJVviPLCVId34z5YQUU+pntlpOX1RxTBYPLdxe+0KcBlDP60sfRlDXYntD8bI3w==", "is_finished"=>"false", "task_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pomodoros_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[36mPomodoro Create (1.4ms)[0m  [1m[32mINSERT INTO "pomodoros" ("user_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["task_id", 7], ["created_at", "2021-10-29 15:43:11.846873"], ["updated_at", "2021-10-29 15:43:11.846873"]]
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pomodoros_controller.rb:7
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/7
+Completed 302 Found in 36ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/tasks/7" for 27.138.247.173 at 2021-10-29 15:43:12 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (8.9ms)
+  Rendered tasks/_form.html.erb (2.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/show.html.erb:22
+  [1m[36mPomodoro Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pomodoros" WHERE "pomodoros"."task_id" = ? LIMIT ?[0m  [["task_id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:31
+  [1m[36mPomodoro Load (0.1ms)[0m  [1m[34mSELECT  "pomodoros".* FROM "pomodoros" WHERE "pomodoros"."task_id" = ? ORDER BY "pomodoros"."id" DESC LIMIT ?[0m  [["task_id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:33
+  Rendered tasks/show.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 98.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/7/timer" for 27.138.247.173 at 2021-10-29 15:43:14 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#timer as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/timer.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/timer.html.erb:6
+  Rendered tasks/timer.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 102.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tasks/7/pomodoros?is_finished=true" for 27.138.247.173 at 2021-10-29 15:43:17 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PomodorosController#create as HTML
+  Parameters: {"authenticity_token"=>"bMAqvv78QfilhfqKDB85a747gD+AvYzJQlsmPQlxnV3NMXpvH5XWifL3FzMXxE6Hy4PmW8+tQUUg21cfkKcEzQ==", "is_finished"=>"true", "task_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pomodoros_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[36mPomodoro Create (1.2ms)[0m  [1m[32mINSERT INTO "pomodoros" ("user_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["task_id", 7], ["created_at", "2021-10-29 15:43:17.257594"], ["updated_at", "2021-10-29 15:43:17.257594"]]
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pomodoros_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pomodoros_controller.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pomodoros_controller.rb:9
+  [1m[36mTask Update (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "is_finished" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["is_finished", 1], ["updated_at", "2021-10-29 15:43:17.267544"], ["id", 7]]
+  ↳ app/controllers/pomodoros_controller.rb:9
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pomodoros_controller.rb:9
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks
+Completed 302 Found in 26ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 15:43:17 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (8.9ms)
+  Rendered tasks/_form.html.erb (1.2ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (8.4ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (8.8ms)
+  Rendered tasks/index.html.erb within layouts/application (37.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 114.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/7" for 27.138.247.173 at 2021-10-29 15:45:29 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.0ms)
+  Rendered tasks/_form.html.erb (2.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/show.html.erb:22
+  [1m[36mPomodoro Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pomodoros" WHERE "pomodoros"."task_id" = ? LIMIT ?[0m  [["task_id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:31
+  [1m[36mPomodoro Load (0.1ms)[0m  [1m[34mSELECT  "pomodoros".* FROM "pomodoros" WHERE "pomodoros"."task_id" = ? ORDER BY "pomodoros"."id" DESC LIMIT ?[0m  [["task_id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:33
+  Rendered tasks/show.html.erb within layouts/application (37.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 122.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/tasks/7" for 27.138.247.173 at 2021-10-29 15:45:32 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/7"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/tasks/7" for 27.138.247.173 at 2021-10-29 15:45:41 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/7"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/tasks/7" for 27.138.247.173 at 2021-10-29 15:46:38 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/7"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 27.138.247.173 at 2021-10-29 15:46:45 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:13
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 27.138.247.173 at 2021-10-29 15:46:47 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:13
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 15:46:48 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.5ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (10.4ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (8.4ms)
+  Rendered tasks/index.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 116ms (Views: 111.3ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/tasks/7" for 27.138.247.173 at 2021-10-29 15:46:52 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"o0TWcHlDJ5KRWU+1dZg43sRWEVJcAJm6pjAliT24SL4CtYahmCqw48YrogxuQ08yse53NhMQVDbEsFSrpG7RLg==", "id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:37
+  [1m[36mPomodoro Update All (1.0ms)[0m  [1m[33mUPDATE "pomodoros" SET "task_id" = NULL WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 7]]
+  ↳ app/controllers/tasks_controller.rb:37
+  [1m[36mTask Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/tasks_controller.rb:37
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:37
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks
+Completed 302 Found in 19ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 15:46:52 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.4ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (9.5ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.5ms)
+  Rendered tasks/index.html.erb within layouts/application (35.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 120.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 15:49:45 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vO3p6GKvpgghzYQp4vK0TqRO89F8xfWGkHNX3lJ7JqQdHLk5g8YxeXa/aZD5KcOi0faVtTPVOAry8yb8y62/NA==", "task"=>{"title"=>"あああ", "body"=>"あああ"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (1.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "is_finished", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "あああ"], ["body", "あああ"], ["is_finished", 0], ["user_id", 1], ["created_at", "2021-10-29 15:49:45.048919"], ["updated_at", "2021-10-29 15:49:45.048919"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/8
+Completed 302 Found in 18ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/tasks/8" for 27.138.247.173 at 2021-10-29 15:49:45 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (12.8ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/show.html.erb:22
+  [1m[36mPomodoro Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pomodoros" WHERE "pomodoros"."task_id" = ? LIMIT ?[0m  [["task_id", 8], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:31
+  Rendered tasks/show.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 110.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/8/edit" for 27.138.247.173 at 2021-10-29 15:49:46 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered tasks/_form.html.erb (89.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (94.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 178ms (Views: 171.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tasks/8" for 27.138.247.173 at 2021-10-29 15:49:51 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/8"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/tasks/8" for 27.138.247.173 at 2021-10-29 15:50:55 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/8"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/tasks/8" for 27.138.247.173 at 2021-10-29 15:57:12 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/8"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 15:59:31 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f30VKcjGNJbzOB0Yk1+PtzzKYNviWueYiWOSOWqZUdPejEX4Ka+j56RK8KGIhPhbSXIGv61KKhTr4+Mb80/IQw==", "task"=>{"title"=>"r", "body"=>"r"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (2.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "is_finished", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "r"], ["body", "r"], ["is_finished", 0], ["user_id", 1], ["created_at", "2021-10-29 15:59:32.027413"], ["updated_at", "2021-10-29 15:59:32.027413"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/9
+Completed 302 Found in 49ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/tasks/9" for 27.138.247.173 at 2021-10-29 15:59:32 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:55
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (14.0ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/show.html.erb within layouts/application (371.6ms)
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007f37dd9ef0e0>:0x00007f37dd9ed6f0>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb__1952197046090968932_69938959055940'
+Started GET "/tasks/8" for 27.138.247.173 at 2021-10-29 16:04:07 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 400 Bad Request in 29ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:48:in `task_params'
+app/controllers/tasks_controller.rb:23:in `show'
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:04:43 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:56:in `ensure_correct_user'
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:05:09 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (12.1ms)
+  Rendered tasks/_form.html.erb (2.2ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 9]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (17.1ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.4ms)
+  Rendered tasks/index.html.erb within layouts/application (45.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 170ms (Views: 142.6ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/tasks/9" for 27.138.247.173 at 2021-10-29 16:05:14 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sYSfYxvuyjmGieo/Br8iB8DSn/RYRdIv6zSQeuC5fsYQdc+y+oddSNH7B4YdZFXrtWr5kBdVH6OJtOFYeW/nVg==", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mPomodoro Update All (0.1ms)[0m  [1m[33mUPDATE "pomodoros" SET "task_id" = NULL WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 9]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mTask Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks
+Completed 302 Found in 18ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:05:15 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (8.7ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (10.7ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.5ms)
+  Rendered tasks/index.html.erb within layouts/application (35.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 16:05:21 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEDG1+Kt8xJZ2T9WzbZ+Mfgt1QV+di7szWytfThNii1psZYGA8RkYw6r0u/WbQndjZWzYTFm42Cv7NxfoZsTvQ==", "task"=>{"title"=>"a", "body"=>"a"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (1.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "is_finished", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["is_finished", 0], ["user_id", 1], ["created_at", "2021-10-29 16:05:21.945319"], ["updated_at", "2021-10-29 16:05:21.945319"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/10
+Completed 302 Found in 17ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/tasks/10" for 27.138.247.173 at 2021-10-29 16:05:22 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:48:in `task_params'
+app/controllers/tasks_controller.rb:23:in `show'
+Started GET "/tasks/10" for 27.138.247.173 at 2021-10-29 16:07:15 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 400 Bad Request in 29ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: new_task):
+  
+app/controllers/tasks_controller.rb:48:in `task_params'
+app/controllers/tasks_controller.rb:23:in `show'
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:07:19 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (13.0ms)
+  Rendered tasks/_form.html.erb (2.2ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 10]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (15.6ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.6ms)
+  Rendered tasks/index.html.erb within layouts/application (45.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 147ms (Views: 141.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 16:07:21 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXrtB5DlpvOS2O0gl5Hiw/GmeDKc10R8Nnz7Vdbwz57Ai73WcYwxgsWqAJmMSpUvhB4eVtPHifBU/Ip3TyZWDg==", "task"=>{"title"=>"a", "body"=>"a"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: new_task):
+  
+app/controllers/tasks_controller.rb:48:in `task_params'
+app/controllers/tasks_controller.rb:11:in `create'
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 16:07:37 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXrtB5DlpvOS2O0gl5Hiw/GmeDKc10R8Nnz7Vdbwz57Ai73WcYwxgsWqAJmMSpUvhB4eVtPHifBU/Ip3TyZWDg==", "task"=>{"title"=>"a", "body"=>"a"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (3.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "is_finished", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["is_finished", 0], ["user_id", 1], ["created_at", "2021-10-29 16:07:37.602979"], ["updated_at", "2021-10-29 16:07:37.602979"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/11
+Completed 302 Found in 54ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/tasks/11" for 27.138.247.173 at 2021-10-29 16:07:37 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:48:in `task_params'
+app/controllers/tasks_controller.rb:23:in `show'
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:07:54 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (13.7ms)
+  Rendered tasks/_form.html.erb (5.2ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 10]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 11]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (20.3ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.4ms)
+  Rendered tasks/index.html.erb within layouts/application (53.0ms)
+  Rendered layouts/_header.html.erb (20.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 650ms (Views: 618.2ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/tasks/10" for 27.138.247.173 at 2021-10-29 16:07:59 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Bd32cPJxoew+ux84A5m+6iviXzENhM114rTLxZS8kn+kLKahExg2nWnJ8oEYQskGXlo5VUKUAPmANLrnDWoL7w==", "id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mPomodoro Update All (0.1ms)[0m  [1m[33mUPDATE "pomodoros" SET "task_id" = NULL WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 10]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mTask Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks
+Completed 302 Found in 21ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:08:00 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.6ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 11]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (14.6ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.9ms)
+  Rendered tasks/index.html.erb within layouts/application (42.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 121ms (Views: 116.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/tasks/11" for 27.138.247.173 at 2021-10-29 16:08:03 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qWeSUHkEZCh40fEqdL4gpSamQW1iGdYvjZR83pT1kj0IlsKBmG3zWS+jHJNvZVdJUx4nCS0JG6PvFA38DSMLrQ==", "id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mPomodoro Update All (0.1ms)[0m  [1m[33mUPDATE "pomodoros" SET "task_id" = NULL WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 11]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mTask Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks
+Completed 302 Found in 17ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:08:03 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (8.8ms)
+  Rendered tasks/_form.html.erb (2.0ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (11.5ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.4ms)
+  Rendered tasks/index.html.erb within layouts/application (36.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 120.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/tasks" for 27.138.247.173 at 2021-10-29 16:08:06 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePuBVUvBXTtcttlKDHgdVkTvyaysw5vbfZPBE6AFFwDZCtGEqqjKSgvENPMXo2q6MVevyOPTVlcfE7AxOdOOkA==", "task"=>{"title"=>"s", "body"=>"s"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[36mTask Create (1.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "body", "is_finished", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "s"], ["body", "s"], ["is_finished", 0], ["user_id", 1], ["created_at", "2021-10-29 16:08:06.644446"], ["updated_at", "2021-10-29 16:08:06.644446"]]
+  ↳ app/controllers/tasks_controller.rb:14
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks/12
+Completed 302 Found in 21ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:08:06 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:48:in `task_params'
+app/controllers/tasks_controller.rb:23:in `show'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:08:26 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (12.6ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/show.html.erb within layouts/application (411.6ms)
+Completed 500 Internal Server Error in 447ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd309759ae8>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272186744960'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:08:51 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (23.8ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/show.html.erb within layouts/application (424.3ms)
+Completed 500 Internal Server Error in 465ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd3103591d0>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272243387740'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:09:45 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (13.1ms)
+  Rendered tasks/_form.html.erb (1.6ms)
+  Rendered tasks/show.html.erb within layouts/application (432.6ms)
+Completed 500 Internal Server Error in 444ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd30a4272e8>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272193472360'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:10:45 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (9.0ms)
+  Rendered tasks/_form.html.erb (1.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 12]]
+  ↳ app/views/tasks/show.html.erb:21
+  [1m[36mPomodoro Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pomodoros" WHERE "pomodoros"."task_id" = ? LIMIT ?[0m  [["task_id", 12], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:30
+  Rendered tasks/show.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 121.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:10:54 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.1ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/show.html.erb within layouts/application (389.1ms)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd309af9810>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272188665980'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:11:14 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (9.2ms)
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/show.html.erb within layouts/application (301.7ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd31c1e1e68>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272343282600'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:12:23 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.0ms)
+  Rendered tasks/_form.html.erb (1.2ms)
+  Rendered tasks/show.html.erb within layouts/application (376.9ms)
+Completed 500 Internal Server Error in 387ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd31c1fadf0>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272343333740'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:12:41 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.2ms)
+  Rendered tasks/_form.html.erb (1.2ms)
+  Rendered tasks/show.html.erb within layouts/application (301.6ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd31c299090>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272343657660'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:12:44 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (10.0ms)
+  Rendered tasks/_form.html.erb (1.2ms)
+  Rendered tasks/show.html.erb within layouts/application (370.7ms)
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x00007fd30975b848>:0x00007fd31039aef0>
+Did you mean?  @task):
+    14:           <%= link_to '開始', timer_task_path(@task), class: "btn btn-sm btn-primary timer_task_#{@task.id}" %>
+    15:         <% end %>
+    16:         <%= link_to '編集', edit_task_path(@task), class: "btn btn-sm btn-success edit_task_#{@task.id}" %>
+    17:         <%= link_to '削除', task_path(@task), method: :delete, data: { confirm: '本当に消しますか？(セット数は残ります)' }, class: "btn btn-sm btn-danger destroy_task_#{task.id}" %>
+    18:       </p>
+    19:       <h5>説明</h4>
+    20:       <p><%= @task.body %></p>
+  
+app/views/tasks/show.html.erb:17:in `_app_views_tasks_show_html_erb___2181495239489345114_70272243522540'
+Started GET "/tasks/12" for 27.138.247.173 at 2021-10-29 16:13:01 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (13.2ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 12]]
+  ↳ app/views/tasks/show.html.erb:22
+  [1m[36mPomodoro Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pomodoros" WHERE "pomodoros"."task_id" = ? LIMIT ?[0m  [["task_id", 12], ["LIMIT", 1]]
+  ↳ app/views/tasks/show.html.erb:31
+  Rendered tasks/show.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_header.html.erb (5.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 215ms (Views: 211.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/tasks/12" for 27.138.247.173 at 2021-10-29 16:13:04 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9kZs4j+GlYzmDI46Av9yF/R1Jey/8rbwk5LuP/QVaFRXtzwz3u8C/bF+Y4MZJAX7gc1DiPDie3zxEp8dbcPxxA==", "id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mPomodoro Update All (1.4ms)[0m  [1m[33mUPDATE "pomodoros" SET "task_id" = NULL WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 12]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mTask Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to https://f2199d7a49474b0ab48789b5cf1906fa.vfs.cloud9.us-east-1.amazonaws.com/tasks
+Completed 302 Found in 19ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/tasks" for 27.138.247.173 at 2021-10-29 16:13:04 +0000
+Cannot render console from 27.138.247.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-29 14:59:59.999999')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-25')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."user_id" = ? AND (created_at > '2021-10-01')[0m  [["user_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (9.2ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 0]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 5]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 6]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 8]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (12.8ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."is_finished" = ?[0m  [["user_id", 1], ["is_finished", 1]]
+  ↳ app/views/tasks/_index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/views/tasks/_index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pomodoros" WHERE "pomodoros"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/views/tasks/_index.html.erb:15
+  Rendered tasks/_index.html.erb (6.3ms)
+  Rendered tasks/index.html.erb within layouts/application (40.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 124.6ms | ActiveRecord: 1.5ms)
+
+

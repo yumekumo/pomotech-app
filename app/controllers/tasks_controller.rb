@@ -4,15 +4,15 @@ class TasksController < ApplicationController
 
   def index
     @tasks = current_user.tasks
-    @task = Task.new
+    @new_task = Task.new
   end
 
   def create
-    @task = Task.new(task_params)
-    @task.is_finished = false
-    @task.user_id = current_user.id
-    if @task.save
-      redirect_to task_path(@task), notice: "You have created task successfully."
+    @new_task = Task.new(task_params)
+    @new_task.is_finished = false
+    @new_task.user_id = current_user.id
+    if @new_task.save
+      redirect_to task_path(@new_task), notice: "You have created task successfully."
     else
       @tasks = current_user.tasks
       render 'index'
@@ -20,6 +20,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @new_task = Task.new
   end
 
   def edit
