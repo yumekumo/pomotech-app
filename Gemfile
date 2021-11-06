@@ -15,7 +15,6 @@ group :development, :test do
   gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
 end
 
-
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
