@@ -1,7 +1,7 @@
 # Pomotech
 Pomotechは、ポモドーロ・タイマーを導入したタスク管理アプリです。  
 25分の作業と5分の休息を1セットとし、それを繰り返すことで作業の効率を上げることができます。  
-また、一日や一週間の作業量をセット数で記録することで、作業量を可視化します。  
+また、一日や一週間の作業量をセット数で記録することで、作業量を可視化します。
 
 ## Webサイト
 https://pomo-tech.herokuapp.com/  
@@ -9,6 +9,9 @@ https://pomo-tech.herokuapp.com/
 テスト用アカウント  
 Email : test@gmail.com  
 Password : password  
+
+## 製作した理由
+ポモドーロ・タイマーは研究等で日頃から利用しており、どのような作業を何セット行ったかの記録を付けたかったため、Webアプリとして製作を行いました。
 
 ## 使用例
 https://user-images.githubusercontent.com/59229602/139516330-9445ef6d-f340-4cce-9d53-6faf0ac01235.mov
@@ -35,5 +38,5 @@ https://user-images.githubusercontent.com/59229602/139516330-9445ef6d-f340-4cce-
 - 言語 : HTML, CSS, JavaScript, Ruby 2.6.6
 - フレームワーク : Ruby on Rails 5.2.6
 - ライブラリ : ImageMagick 7.0.11
-- IDE : Cloud9
+- ストレージ：Amazon S3
 - デプロイ先 : Heroku
