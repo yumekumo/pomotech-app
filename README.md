@@ -10,7 +10,7 @@ https://pomo-tech.herokuapp.com/
 Email : test@gmail.com  
 Password : password  
 
-## 製作した理由
+## 製作背景
 ポモドーロ・タイマーは研究等で日頃から利用しており、どのような作業を何セット行ったかの記録を付けたかったため、Webアプリとして製作を行いました。
 
 ## 使用例
