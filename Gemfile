@@ -5,11 +5,17 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
+
+group :production do
+  gem 'pg'
+end
+
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
 group :development, :test do
   gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
 end
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -76,7 +82,3 @@ gem "refile-s3"
 gem 'dotenv-rails'
 
 gem 'pry-byebug'
-
-group :production do
-  gem 'pg', '0.20.0'
-end
