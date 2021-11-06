@@ -78,5 +78,5 @@ gem 'dotenv-rails'
 gem 'pry-byebug'
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.20.0'
 end
